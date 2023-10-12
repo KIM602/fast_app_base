@@ -4,7 +4,8 @@ A new Flutter project.
 <br/>
 Flutter 활용 토스뱅크 앱 만들기
 <br/>
-![image](https://github.com/KIM602/flutter_toss_application/assets/112933103/5a1382f1-09c1-411f-a6e9-c237b04be365)
+![image](https://github.com/KIM602/flutter_toss_application/assets/112933103/79ec779a-990e-4301-b717-e4ee91e0cfcc)
+![image](https://github.com/KIM602/flutter_toss_application/assets/112933103/5a1382f1-09c1-411f-a6e9-c237b04be365)<br/>
 ![image](https://github.com/KIM602/flutter_toss_application/assets/112933103/5e2bd930-b1e7-4154-afde-c1bbc35ed285)
 ![image](https://github.com/KIM602/flutter_toss_application/assets/112933103/00fa9744-b038-40b8-adb8-27c41a4bd0a4)
 <br/>
