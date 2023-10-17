@@ -3,7 +3,6 @@ import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
-import 'package:nav/enum/enum_nav_ani.dart';
 
 class NumberDialog extends DialogWidget<int> {
   NumberDialog(
