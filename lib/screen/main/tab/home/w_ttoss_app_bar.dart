@@ -47,15 +47,20 @@ class _TtossAppBarState extends State<TtossAppBar> {
                 if (_showRedDot)
                   Positioned.fill(
                       child: Align(
-                        alignment: Alignment.topRight,
-                        child: Container(
-                          width: 6,
-                          height: 6,
-                          decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
-                        ),
-                      ))
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 6,
+                      height: 6,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.red),
+                    ),
+                  ))
               ],
-            ),
+            )
+                .animate(onPlay: (controller) => controller.repeat())
+                .shake(duration: 2100.ms, hz: 3)
+                .then()
+                .fadeOut(duration: 1000.ms),
           ),
           width10,
         ],
