@@ -25,7 +25,7 @@ class MyStockFragment extends StatelessWidget {
             '계좌'.text.make(),
             Row(
               children: [
-                '443원'.text.size(24).bold.make(),
+                '800,000,000원'.text.size(24).bold.make(),
                 const Arrow(),
                 emptyExpanded,
                 RoundedContainer(
