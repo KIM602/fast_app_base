@@ -33,10 +33,10 @@ class _AnimatedAppBarState extends State<AnimatedAppBar> {
   bool get isTriggered => scrollPosition > 80;
 
   double getValue(double initial, double target) {
-    if(isTriggered) {
+    if (isTriggered) {
       return target;
     }
-    double fraction = scrollPosition/80;
+    double fraction = scrollPosition / 80;
     return initial + (target - initial) * fraction;
   }
 
@@ -55,17 +55,35 @@ class _AnimatedAppBarState extends State<AnimatedAppBar> {
                 child: const Arrow(
                   direction: AxisDirection.left,
                 )).p20(),
+            Positioned.fill(
+              child: Align(
+                alignment: Alignment.topRight,
+                child: TweenAnimationBuilder<Color?>(
+                  duration: 1000.ms,
+                  tween: ColorTween(
+                      begin: Colors.green,
+                      end: isTriggered ? Colors.orange : Colors.green),
+                  builder: (context, value, child) => ColorFiltered(
+                      colorFilter: ColorFilter.mode(
+                          value ?? Colors.green, BlendMode.modulate),
+                      child: child),
+                  child: Image.asset(
+                    "$basePath/icon/map_point.png",
+                    height: 60,
+                  ),
+                ),
+              ),
+            ),
             AnimatedContainer(
               duration: duration,
               padding: EdgeInsets.only(
-                  left: getValue(20, 50),
-                  top: getValue(50, 15),
+                left: getValue(20, 50),
+                top: getValue(50, 15),
               ),
               child: AnimatedDefaultTextStyle(
                 duration: duration,
                 style: TextStyle(
-                    fontSize: getValue(30, 18),
-                    fontWeight: FontWeight.bold),
+                    fontSize: getValue(30, 18), fontWeight: FontWeight.bold),
                 child: widget.title.text.make(),
               ),
             ),
